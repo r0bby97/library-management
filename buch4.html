@@ -1,0 +1,63 @@
+<!-- In buch4.html befinden sich die Buchinformationen. Diese sind für alle einsehbar. Sie beinhalten z.B. den Titel,
+ein Titelbild und das durchschnittliche Rating. Hier kann der RN eine Bewertung für das Buch hinterlassen, welches das
+duchschnittliche Rating beeinflusst. Von hier kann der RN Bücher zur Wunschliste hinzufügen, über den Button "Add to
+Wischlist". B kann von hier die Eigenschaften der Bücher verändern, über "edit" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Harry Potter and the Goblet of Fire</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!--Smartphoneoptimiert-->
+  <link href="css/styleBookDescriptions.css" rel="stylesheet">
+</head>
+
+<body>
+  <form class="book1" method="GET" action="rateBook.html">
+    <div class="logoutButton">
+      <a href="login.html">Logout</a>
+    </div>
+    <div class="backButton">
+      <a href="allBooks.html">Back</a>
+    </div>
+    <div class="editButton">
+      <a href="">Edit</a>
+    </div>
+    <div class="rateButton">
+      <input type="hidden" name="title" value="Harry Potter and the Goblet of Fire">
+      <input id="ratingButton" type="submit" value="Rate">
+    </div>
+    <h1>Harry Potter and the Goblet of Fire</h1>
+    <img src="bilder/bild4.jpg" alt="" />
+    <table>
+      <tbody>
+        <tr>
+          <td> <b> Author </b> </td>
+          <td> Joanne K. Rowling </td>
+        </tr>
+        <tr>
+          <td> <b> Release year </b> </td>
+          <td> 2000 </td>
+        </tr>
+        <tr>
+          <td> <b> Average rating </b> </td>
+          <td> 4,7 </td>
+        </tr>
+        <tr>
+          <td colspan="2"><div class="addToWishlistButton">
+              <a href="">Add to Wishlist</a>
+            </div></td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      <br>
+      The school finds itself playing host to two visiting magical schools. Only
+      three of the bravest witches or wizards over the age of seventeen may compete;
+      their names to be drawn out of the enticing, golden Triwizard Cup. But this
+      is no Quidditch match, the reward is glory but the perils are lethal and
+      somebody has other plans in store. For when the time comes, the unthinkable
+      happens; an extra name is recalled from the cup, Harry Potter’s name.
+    </p>
+  </form>
+</body>
+</html>

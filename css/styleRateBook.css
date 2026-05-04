@@ -1,0 +1,165 @@
+/* ------------------------------- Restyle rateBook.html ------------------------------- */
+* {                           /* *-Selector selectiert alles*/
+  margin: 0px;                /* Außenabstand */
+	padding: 0px;               /* Innenabstand */
+	box-sizing: border-box;     /* border, padding, content zählt als width */
+}
+
+body, html {
+	height: 100%;
+	font-family: "Courier", monospace;
+  background-color: #f2f2f2;
+}
+
+.rateBook {
+    width: 500px;
+    padding: 100px 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);     /* Verschiebt es, damit der Kasten mittig ist */
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 5px 5px 5px 5px #aaaaaa;
+}
+
+.rateBook h1 {
+    text-align: center;
+    margin-bottom: 150px;
+    color: #454242;
+}
+
+.input {
+    border-bottom: 1px solid #454242;
+    position: relative;
+    margin: 30px 0;
+}
+.input input {
+    width: 100%;
+    outline: none;
+    border: none;
+    font-family: "Courier", monospace;
+}
+
+.information {
+  position: relative;
+  margin: 30px 0px 5px ;
+  font-size: 15px;
+}
+
+.button {
+    border-radius: 12px;
+    width: 100%;
+    height: 50px;
+    border: none;
+    font-family: "Courier", monospace;
+    color: #454242;
+    background-color: #f2f2f2;
+}
+
+.buttonSave {
+    border-radius: 12px;
+    width: 60px;
+    height: 25px;
+    border: none;
+    font-family: "Courier", monospace;
+    color: #454242;
+    background-color: #f2f2f2;
+  }
+
+.logoutButton {
+    color: #454242;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    font-size: 15px;
+}
+
+.logoutButton a:link {
+    text-decoration: none;
+    color: #454242;
+}
+
+.logoutButton a:visited {
+    text-decoration: none;
+    color: #454242;
+}
+
+.logoutButton a:hover {
+    text-decoration: none;
+    color: #6a7dfe;
+}
+
+.logoutButton a:active {
+    text-decoration: none;
+    color: #6a7dfe;
+}
+
+.backButton {
+    color: #454242;
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    font-size: 15px;
+}
+
+.backButton:link {
+    text-decoration: none;
+    color: #454242;
+}
+
+.backButton:visited {
+    text-decoration: none;
+    color: #454242;
+}
+
+.backButton:hover {
+    text-decoration: none;
+    color: #6a7dfe;
+    cursor: pointer;
+}
+
+.backButton:active {
+    text-decoration: none;
+    color: #6a7dfe;
+}
+
+.checked {
+  color: orange;
+}
+
+.rating {
+  unicode-bidi: bidi-override;
+  position: relative;
+  margin: 5px 0px 0px 0px;
+  padding: 0;
+  color: #d2d2d2;
+  font-size: 25px;
+  text-shadow: 0px 1px 0 #959595;
+  height: 20px;
+  width: 105px;
+}
+
+.rating input {
+  outline: none;
+  border: none;
+  font-family: "Courier", monospace;
+  margin: 5px 15px 0px;
+}
+
+.rating-upper {
+  position: absolute;
+  z-index: 1;
+  overflow: hidden;
+  padding: 0;
+  color: orange;
+  display: flex;
+  top: 0;
+  left: 0;
+}
+
+.rating-lower {
+  z-index: 0;
+  padding: 0;
+  display: flex;
+}

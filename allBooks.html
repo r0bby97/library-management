@@ -1,0 +1,88 @@
+<!-- allBooks.html zeigt alle Bücher aus der DB an mit ihren Eigenschaften. Bücher lassen sich einzeln anklicken und man kommt
+auf eine Seite mit spezifischen Details (für B und RN). Zusätzlich lassen sich von hier aus über den Knopf "Add" Bücher hinzufügen
+(für B). Es können außerdem Bücher aus der DB gelöscht werden (für B) und man gelangt durch "Account" zur Accountverwaltung, wo sich
+auch die Wunschlisten befinden (B und RN). Man kann sich fast von überall Ausloggen. allBooks.html besitzt ebenfalls eine Suche,
+mit der man Bücher aus der DB suchen kann -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>All Books</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!--Smartphoneoptimiert-->
+  <link href="css/styleAllBooks.css" rel="stylesheet">
+</head>
+<body>
+  <form class="allBooks">
+    <div class="logoutButton">
+      <a href="login.html">Logout</a>
+    </div>
+    <div class="addButton">
+      <a href="addBook.html">Add</a>
+    </div>
+    <div class="backButton">
+      <a href="index.html">Back</a>
+    </div>
+    <div class="searchBar">
+      <label><b></b></label>
+      <input type="text" placeholder="Search" />
+    </div>
+    <h1>All Books</h1>
+    <table>
+      <tbody>
+        <tr>
+          <td> <b> Title </b> </td>
+          <td> <b> Author </b> </td>
+          <td> <b> Release year </b> </td>
+          <td> <b> Average rating </b> </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td> <div class="linkToDescription">
+            <a href="buch1.html"> Harry Potter and the Philosopher's Stone </a> </div> </td>
+          <td> Joanne K. Rowling </td>
+          <td> 1997 </td>
+          <td> 4,5 </td>
+          <td> <div class="linkToDescription">
+            <a href=""> delete </a> </div> </td>
+        </tr>
+        <tr>
+          <td> <div class="linkToDescription">
+            <a href="buch2.html"> Harry Potter and the Chamber of Secrets </a> </div> </td>
+          <td> Joanne K. Rowling </td>
+          <td> 1998 </td>
+          <td> 4,33 </td>
+          <td> <div class="linkToDescription">
+            <a href=""> delete </a> </div> </td>
+        </tr>
+        <tr>
+          <td> <div class="linkToDescription">
+            <a href="buch3.html"> Harry Potter and the Prisoner of Azkaban </a> </div> </td>
+          <td> Joanne K. Rowling </td>
+          <td> 1999 </td>
+          <td> 4,2 </td>
+          <td> <div class="linkToDescription">
+            <a href=""> delete </a> </div> </td>
+        </tr>
+        <tr>
+          <td> <div class="linkToDescription">
+            <a href="buch4.html"> Harry Potter and the Goblet of Fire </a> </div> </td>
+          <td> Joanne K. Rowling </td>
+          <td> 2000 </td>
+          <td> 4,7 </td>
+          <td> <div class="linkToDescription">
+            <a href=""> delete </a> </div> </td>
+        </tr>
+        <tr>
+          <td> <div class="linkToDescription">
+            <a href="buch5.html"> Harry Potter and the Order of the Phoenix </a> </div> </td>
+          <td> Joanne K. Rowling </td>
+          <td> 2003 </td>
+          <td> 3,2 </td>
+          <td> <div class="linkToDescription">
+            <a href=""> delete </a> </div> </td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+</body>
+</html>

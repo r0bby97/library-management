@@ -1,0 +1,63 @@
+<!-- In buch5.html befinden sich die Buchinformationen. Diese sind für alle einsehbar. Sie beinhalten z.B. den Titel,
+ein Titelbild und das durchschnittliche Rating. Hier kann der RN eine Bewertung für das Buch hinterlassen, welches das
+duchschnittliche Rating beeinflusst. Von hier kann der RN Bücher zur Wunschliste hinzufügen, über den Button "Add to
+Wischlist". B kann von hier die Eigenschaften der Bücher verändern, über "edit" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Harry Potter and the Order of the Phoenix</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!--Smartphoneoptimiert-->
+  <link href="css/styleBookDescriptions.css" rel="stylesheet">
+</head>
+
+<body>
+  <form class="book1" method="GET" action="rateBook.html">
+    <div class="logoutButton">
+      <a href="login.html">Logout</a>
+    </div>
+    <div class="backButton">
+      <a href="allBooks.html">Back</a>
+    </div>
+    <div class="editButton">
+      <a href="">Edit</a>
+    </div>
+    <div class="rateButton">
+      <input type="hidden" name="title" value="Harry Potter and the Order of the Phoenix">
+      <input id="ratingButton" type="submit" value="Rate">
+    </div>
+    <h1>Harry Potter and the Order of the Phoenix</h1>
+    <img src="bilder/bild5.jpg" alt="" />
+    <table>
+      <tbody>
+        <tr>
+          <td> <b> Author </b> </td>
+          <td> Joanne K. Rowling </td>
+        </tr>
+        <tr>
+          <td> <b> Release year </b> </td>
+          <td> 2003 </td>
+        </tr>
+        <tr>
+          <td> <b> Average rating </b> </td>
+          <td> 3,2 </td>
+        </tr>
+        <tr>
+          <td colspan="2"><div class="addToWishlistButton">
+              <a href="">Add to Wishlist</a>
+            </div></td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      <br>
+      Lord Voldemort has returned in secret and not everyone believes Harry’s
+      account of what happened to him in the final moments of the Triwizard
+      Tournament. For the school is now under the governance of the ruthless,
+      sugar-pink-clad, Dolores Umbridge who is intent on bringing her own brand
+      of order to the school, using increasingly brutal methods. There are those
+      who are fighting back, but this puts those Harry loves most in mortal danger.
+    </p>
+  </form>
+</body>
+</html>

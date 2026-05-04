@@ -1,0 +1,233 @@
+<!-- Hier lassen sich Bücher vom RN bewerten. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Rate Book</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!--Smartphoneoptimiert-->
+  <link rel="stylesheet" href="css/styleRateBook.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<!-- Zum vermeiden von Postback -->
+<body onkeypress="return DisableEnterKey(event);">
+  <form class="rateBook">
+    <div class="logoutButton">
+      <a href="login.html">Logout</a>
+    </div>
+    <div class="backButton" onclick="goBack()">
+      Back
+    </div>
+    <h1>Rate Book</h1>
+    <div class="input">
+      <label for="title"><b></b></label>
+      <input type="text" id="title" readonly/>
+    </div>
+    <div class="input">
+      <input type="number" min="1" max="5" id="ratingTextfield" placeholder="Rate from 1 to 5" required/>
+    </div>
+    <input type="button" class="button" id="buttonRating" value="Rate" onclick="rating();">
+    <div class="information">
+      Here are the current ratings (absolut):
+    </div>
+
+    <div class="rating">
+      <div class="rating-upper" style="width: 20%">
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+      </div>
+      <div class="rating-lower">
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+        <input type="text" id="oneStarRating" value="0" readonly/>
+      </div>
+    </div>
+
+    <div class="rating">
+      <div class="rating-upper" style="width: 40%">
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+      </div>
+      <div class="rating-lower">
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+        <input type="text" id="twoStarRating" value="0" readonly/>
+      </div>
+    </div>
+
+    <div class="rating">
+      <div class="rating-upper" style="width: 60%">
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+      </div>
+      <div class="rating-lower">
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+        <input type="text" id="threeStarRating" value="0" readonly/>
+      </div>
+    </div>
+
+    <div class="rating">
+      <div class="rating-upper" style="width: 80%">
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+      </div>
+      <div class="rating-lower">
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+        <input type="text" id="fourStarRating" value="0" readonly/>
+      </div>
+    </div>
+
+    <div class="rating">
+      <div class="rating-upper" style="width: 100%">
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+      </div>
+      <div class="rating-lower">
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+        <input type="text" id="fiveStarRating" value="0" readonly/>
+      </div>
+    </div>
+
+    <div class="information">
+      Average rating:
+    </div>
+    <div class="rating">
+      <div class="rating-upper" id="percentStar" style="width: 0%">
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+      </div>
+      <div class="rating-lower">
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+        <input type="text" id="averageRating" size="30" value="0 based on 0 reviews." readonly/>
+      </div>
+    </div>
+  </form>
+
+
+  <script>
+  function goBack() { // Sorgt für ein logisches Zurück
+    window.history.back();
+  }
+  </script>
+
+  <script>
+  function DisableEnterKey(e) { // verhindert Postback
+     var key;
+     if(window.event) {
+          key = window.event.keyCode; //IE
+     } else {
+          key = e.which; //firefox
+        }
+     return (key != 13);
+   }
+  </script>
+
+  <script>
+  window.onload = function() { // Schnappt sich die URL und setzt den Titel daraus ins Textfeld
+    if (window.location.search != '') {
+      var url = window.location.search;
+      var titleWithoutQuestionmark = url.replace("?title=", "");
+      var titleWithoutPlus = decodeURIComponent(titleWithoutQuestionmark).replace(/\+/g, " ");
+      document.getElementById("title").value = "" + titleWithoutPlus;
+    }
+  }
+  </script>
+
+  <script>
+  var avarage = 1;
+  var avarageCounter = 0;
+  var avarageSum = 0;
+
+  var sum1star = 0;
+  var sum2star = 0;
+  var sum3star = 0;
+  var sum4star = 0;
+  var sum5star = 0;
+
+  function rating() { // Verarbeitet die eingegebene Bewertung und Zeigt Statistiken dazu an
+
+    //Eingabe wird gelesen und umgewandelt zu int
+    var rating = document.getElementById("ratingTextfield");
+    var intRating = parseInt(rating.value);
+
+    // Zeigt die Summen aller 1, 2, 3, 4 und 5 Sterne Bewertungen an
+    if (intRating == 1) {
+      sum1star++;
+      document.getElementById("oneStarRating").value = sum1star;
+    } else if (intRating == 2) {
+      sum2star++;
+      document.getElementById("twoStarRating").value = sum2star;
+    } else if (intRating == 3) {
+      sum3star++;
+      document.getElementById("threeStarRating").value = sum3star;
+    } else if (intRating == 4) {
+      sum4star++;
+      document.getElementById("fourStarRating").value = sum4star;
+    } else if (intRating == 5) {
+      sum5star++;
+      document.getElementById("fiveStarRating").value = sum5star;
+    } else {
+      alert("Please enter only a number from 1 to 5");
+    }
+
+    // Berechnet den Durchschnitt aller Bewertungen und zeigt diesen an
+    if (intRating ==  1 || intRating ==  2 || intRating ==  3 || intRating ==  4 || intRating ==  5) {
+      avarageCounter++;
+      avarageSum = avarageSum + intRating;
+      avarage = avarageSum / avarageCounter;
+      if (avarageCounter == 1) {
+        document.getElementById("averageRating").value = (avarage.toFixed(2) + "  based on " +  avarageCounter + " review.");
+      } else {
+        document.getElementById("averageRating").value = (avarage.toFixed(2) + "  based on " +  avarageCounter + " reviews.");
+      }
+
+      // Befüllt den Stern je nach Durchschnitt
+      var percent = (avarage.toFixed(2) * 100 * 100) / 500;
+      document.getElementById("percentStar").style.width = percent + "%";
+    }
+  }
+  </script>
+
+</body>
+</html>

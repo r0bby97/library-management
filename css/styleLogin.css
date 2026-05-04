@@ -1,0 +1,78 @@
+/* ------------------------------- Restyle login.html ------------------------------- */
+* {                           /* *-Selector selectiert alles*/
+  margin: 0px;                /* Außenabstand */
+	padding: 0px;               /* Innenabstand */
+	box-sizing: border-box;     /* border, padding, content zählt als width */
+}
+
+body, html {
+	height: 100%;
+	font-family: "Courier", monospace;
+  background-color: #f2f2f2;
+}
+
+.login {
+    width: 400px;
+    padding: 100px 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);     /* Verschiebt es, damit der Kasten mittig ist */
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 5px 5px 5px 5px #aaaaaa;
+}
+
+.login h1 {
+    text-align: center;
+    margin-bottom: 150px;
+    color: #454242;
+}
+
+.input {
+    border-bottom: 1px solid #454242;
+    position: relative;
+    margin: 30px 0;
+}
+.input input {
+    outline: none;
+    border: none;
+    font-family: "Courier", monospace;
+}
+
+.button {
+    border-radius: 12px;
+    width: 100%;
+    height: 50px;
+    border: none;
+    font-family: "Courier", monospace;
+    color: #454242;
+    background-color: #f2f2f2;
+}
+
+.signUp {
+    color: #454242;
+    text-align: center;
+    margin-top: 100px;
+    font-size: 15px;
+}
+
+.signUp a:link {
+    text-decoration: none;
+    color: #454242;
+}
+
+.signUp a:visited {
+    text-decoration: none;
+    color: #454242;
+}
+
+.signUp a:hover {
+    text-decoration: none;
+    color: #6a7dfe;
+}
+
+.signUp a:active {
+    text-decoration: none;
+    color: #6a7dfe;
+}

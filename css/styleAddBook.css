@@ -1,0 +1,107 @@
+/* ------------------------------- Restyle addBook.html ------------------------------- */
+* {                           /* *-Selector selectiert alles*/
+  margin: 0px;                /* Außenabstand */
+	padding: 0px;               /* Innenabstand */
+	box-sizing: border-box;     /* border, padding, content zählt als width */
+}
+
+body, html {
+	height: 100%;
+	font-family: "Courier", monospace;
+  background-color: #f2f2f2;
+}
+
+.addBook {
+    width: 400px;
+    padding: 100px 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);     /* Verschiebt es, damit der Kasten mittig ist */
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 5px 5px 5px 5px #aaaaaa;
+}
+
+.addBook h1 {
+    text-align: center;
+    margin-bottom: 150px;
+    color: #454242;
+}
+
+.input {
+    border-bottom: 1px solid #454242;
+    position: relative;
+    margin: 30px 0;
+}
+.input input {
+    outline: none;
+    border: none;
+    font-family: "Courier", monospace;
+}
+
+.button {
+    border-radius: 12px;
+    width: 100%;
+    height: 50px;
+    border: none;
+    font-family: "Courier", monospace;
+    color: #454242;
+    background-color: #f2f2f2;
+}
+
+.logoutButton {
+    color: #454242;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    font-size: 15px;
+}
+
+.logoutButton a:link {
+    text-decoration: none;
+    color: #454242;
+}
+
+.logoutButton a:visited {
+    text-decoration: none;
+    color: #454242;
+}
+
+.logoutButton a:hover {
+    text-decoration: none;
+    color: #6a7dfe;
+}
+
+.logoutButton a:active {
+    text-decoration: none;
+    color: #6a7dfe;
+}
+
+.backButton {
+    color: #454242;
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    font-size: 15px;
+}
+
+.backButton a:link {
+    text-decoration: none;
+    color: #454242;
+}
+
+.backButton a:visited {
+    text-decoration: none;
+    color: #454242;
+}
+
+.backButton a:hover {
+    text-decoration: none;
+    color: #6a7dfe;
+}
+
+.backButton a:active {
+    text-decoration: none;
+    color: #6a7dfe;
+}

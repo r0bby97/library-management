@@ -1,0 +1,222 @@
+/* ------------------------------- Restyle buch*.html ------------------------------- */
+* {                           /* *-Selector selectiert alles*/
+  margin: 0px;                /* Außenabstand */
+	padding: 0px;               /* Innenabstand */
+	box-sizing: border-box;     /* border, padding, content zählt als width */
+}
+
+body, html {
+	height: 100%;
+	font-family: "Courier", monospace;
+  background-color: #f2f2f2;
+}
+
+.book1 {
+    width: 700px;
+    padding: 80px 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);     /* Verschiebt es, damit der Kasten mittig ist */
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 5px 5px 5px 5px #aaaaaa;
+}
+
+.book1 h1 {
+    text-align: center;
+    margin-bottom: 70px;
+    color: #454242;
+}
+
+td {
+  border: 10px solid #ffffff
+}
+
+.button {
+    border-radius: 12px;
+    width: 100%;
+    height: 50px;
+    border: none;
+    font-family: "Courier", monospace;
+    color: #454242;
+    background-color: #f2f2f2;
+  }
+
+  .buttonSave {
+      border-radius: 12px;
+      width: 60px;
+      height: 25px;
+      border: none;
+      font-family: "Courier", monospace;
+      color: #454242;
+      background-color: #f2f2f2;
+    }
+
+  img {
+    float: right;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    width: 30%;
+  }
+
+  p {
+    text-align: justify;
+  }
+
+.logoutButton {
+    color: #454242;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    font-size: 15px;
+}
+
+.logoutButton a:link {
+    text-decoration: none;
+    color: #454242;
+}
+
+.logoutButton a:visited {
+    text-decoration: none;
+    color: #454242;
+}
+
+.logoutButton a:hover {
+    text-decoration: none;
+    color: #6a7dfe;
+}
+
+.logoutButton a:active {
+    text-decoration: none;
+    color: #6a7dfe;
+}
+
+.backButton {
+    color: #454242;
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    font-size: 15px;
+}
+
+.backButton a:link {
+    text-decoration: none;
+    color: #454242;
+}
+
+.backButton a:visited {
+    text-decoration: none;
+    color: #454242;
+}
+
+.backButton a:hover {
+    text-decoration: none;
+    color: #6a7dfe;
+}
+
+.backButton a:active {
+    text-decoration: none;
+    color: #6a7dfe;
+}
+
+.editButton {
+    color: #454242;
+    position: absolute;
+    position: fixed;
+    left: 120px;
+    top: 20px;
+    font-size: 15px;
+  }
+
+.editButton a:link {
+    text-decoration: none;
+    color: #454242;
+}
+
+.editButton a:visited {
+    text-decoration: none;
+    color: #454242;
+}
+
+.editButton a:hover {
+    text-decoration: none;
+    color: #6a7dfe;
+}
+
+.editButton a:active {
+    text-decoration: none;
+    color: #6a7dfe;
+}
+
+.rateButton {
+    color: #454242;
+    position: fixed;
+    left: 70px;
+    top: 20px;
+    font-size: 15px;
+    font-family: "Courier", monospace;
+  }
+
+  #ratingButton {
+    font-family: "Courier", monospace;
+    font-size: 15px;
+    color: #454242;
+    padding: 0;
+    border: none;
+    background: none;
+    outline:none;
+    border: 0;
+  }
+
+#ratingButton:link {
+    text-decoration: none;
+    color: #454242;
+}
+
+#ratingButton:visited {
+    text-decoration: none;
+    color: #454242;
+}
+
+#ratingButton:hover {
+    text-decoration: none;
+    color: #6a7dfe;
+    cursor: pointer;
+}
+
+#rating:active {
+    text-decoration: none;
+    color: #6a7dfe;
+}
+
+.addToWishlistButton {
+  border: 1px solid #454242;
+  padding: 10px;
+  color: #454242;
+  font-size: 15px;
+  border-radius: 12px;
+  background-color: #f2f2f2;
+  width: 158px;
+
+}
+
+.addToWishlistButton a:link {
+    text-decoration: none;
+    color: #454242;
+}
+
+.addToWishlistButton a:visited {
+    text-decoration: none;
+    color: #454242;
+}
+
+.addToWishlistButton a:hover {
+    text-decoration: none;
+    color: #6a7dfe;
+}
+
+.addToWishlistButton a:active {
+    text-decoration: none;
+    color: #6a7dfe;
+}
