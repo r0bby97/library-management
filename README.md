@@ -44,3 +44,7 @@ GitHub Pages cannot run this PHP/MySQL backend, so no complete live application 
 - `bilder/`: book and interface images.
 - `scripts/`: bundled JavaScript library.
 - `php/`: database exercise.
+
+## Feedback and contributions
+
+For a bug report, open a repository issue with steps to reproduce, expected and actual behavior, and your browser or device details. Discuss substantial changes in an issue before opening a pull request. Keep changes focused and describe how you checked them.
